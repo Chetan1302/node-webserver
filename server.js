@@ -54,6 +54,9 @@ hbs.registerHelper('screamIt',(text)=>{
 //Middleware to inform express static library
 app.use(express.static(__dirname + "/public"));
 
+
+
+
 //Handler to process index get  request
 app.get('/',(req,res)=>{
   //  res.send("<h1>Hello Express</h1>");
