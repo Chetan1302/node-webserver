@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.port || 3000;
 
 //Assigning Expresss object to app  which will be used throughout
 var app = express();
@@ -102,6 +103,13 @@ app.get('/maintain',(req,res)=>{
  })
 
 //Starting up Server
-app.listen(3000,()=>{
+//IN normal case
+/*app.listen(3000,()=>{
+    console.log("Server is up and running on port 3000");
+});*/
+
+//IN case of Heroku
+
+app.listen(port,()=>{
     console.log("Server is up and running on port 3000");
 });
