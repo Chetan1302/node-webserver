@@ -44,11 +44,7 @@ hbs.registerHelper('screamIt',(text)=>{
 
 
  app.use((req,res,next)=>{
-    res.render("maintenance.hbs",{
-        pageTitle: 'Maintainnance Page',
-        welcomeMessage:"Soon this page will be available"
-    });
-
+     next();
  });
 
 
