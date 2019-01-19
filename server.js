@@ -91,10 +91,18 @@ app.get('/bad',(req,res)=>{
 
 //Handler to process maintainence Get request
 app.get('/maintain',(req,res)=>{
-    // res.send("About Page");
     res.render("maintenance.hbs",{
         pageTitle: 'Maintainnance Page',
         welcomeMessage:"Soon this page will be available"
+    });
+ })
+
+
+//Handler to process maintainence Get request
+app.get('/projects',(req,res)=>{
+    res.render("projects.hbs",{
+        pageTitle: 'Projects Page',
+        welcomeMessage:"This has all information about projects that I am working on at the moment"
     });
  })
 
